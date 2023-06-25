@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { TextcomponentComponent } from './textcomponent/textcomponent.component';
 import { ImageComponentComponent } from './image-component/image-component.component';
 import { RoomsComponent } from './rooms/rooms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoomsListComponent } from './rooms/rooms-list/rooms-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextcomponentComponent,
     ImageComponentComponent,
-    RoomsComponent
+    RoomsComponent,
+    RoomsListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
