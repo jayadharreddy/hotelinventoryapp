@@ -1,0 +1,14 @@
+<h2>Hello World</h2>
+<app-textcomponent></app-textcomponent>
+<!-- <app-image-component></app-image-component> -->
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'User'">
+    Welcome User
+  </div>
+  <div *ngSwitchCase="'Admin'">
+    <hinv-rooms></hinv-rooms>
+  </div>
+  <div *ngSwitchDefault="">
+    You're not Authoized to view this Page
+  </div>
+</div>
