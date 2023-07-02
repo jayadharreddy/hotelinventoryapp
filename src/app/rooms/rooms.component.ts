@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Room, RoomsList } from './rooms';
+import { Room, RoomList } from './rooms';
 
 @Component({
   selector: 'hinv-rooms',
@@ -7,10 +7,12 @@ import { Room, RoomsList } from './rooms';
   styleUrls: ['./rooms.component.scss']
 })
 export class RoomsComponent {
+
   hotelName = 'Hilton Hotel';
   numberOfRooms = 10;
   hideRooms = false;
-  selectedRoom! : RoomsList;
+  selectedRoom! : RoomList;
+  title= 'Room List';
 constructor() {};
 ngOnInit(): void{};
 
@@ -19,7 +21,7 @@ ngOnInit(): void{};
     availableRooms: 10,
     bookedRooms: 5
   };
-  roomsList: RoomsList[] = [
+  roomList: RoomList[] = [
     {
       roomNumber: 1,
       roomType: 'Deluxe Room',
@@ -54,10 +56,27 @@ ngOnInit(): void{};
 
   toggle() {
     this.hideRooms = !this.hideRooms;
+    this.title ="Rooms List"
   }
 
-  selectRoom(room: RoomsList){
+  selectRoom(room: RoomList){
     this.selectedRoom= room;
     console.log(room);
   }
+
+  addRoom() {
+    const room : RoomList = {
+      roomNumber: 4,
+      roomType: 'Deluxe Suite',
+      amenities: 'AC, Free Wifi, TV, Bath Room, Kitchen',
+      price: 3450,
+      photos: './assets/settipi.j.reddy.jpg',
+      checkInTime: new Date('11-Dec-2021'),
+      checkOutTime: new Date('12-Dec-2021'),
+      rating: 4.5,
+    }
+    //this.roomList.push(room);
+    this.roomList= [...this.roomList, room];
+  }
+
 }
