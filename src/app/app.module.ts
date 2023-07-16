@@ -8,6 +8,7 @@ import { ImageComponentComponent } from './image-component/image-component.compo
 import { RoomsComponent } from './rooms/rooms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoomsListComponent } from './rooms/rooms-list/rooms-list.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RoomsListComponent } from './rooms/rooms-list/rooms-list.component';
     TextcomponentComponent,
     ImageComponentComponent,
     RoomsComponent,
-    RoomsListComponent
+    RoomsListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
